@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <title>කසුන් ❤ සඳුනි | මංගල ආරාධනා පත්‍රය</title>
+
+  <!-- SEO & Open Graph (WhatsApp Preview) -->
+  <meta name="description" content="කසුන් සහ සඳුනිගේ මංගල උත්සවයට ඔබ සාදරයෙන් ආරාධනා කරනු ලැබේ. 2026 දෙසැම්බර් 20 වන දින." />
+  <meta property="og:title" content="💍 කසුන් ❤ සඳුනි | මංගල ආරාධනා පත්‍රය" />
+  <meta property="og:description" content="කසුන් සහ සඳුනිගේ මංගල උත්සවය සඳහා ඔබව සාදරයෙන් ආරාධනා කරනු ලැබේ. 2026 දෙසැම්බර් 20" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta name="theme-color" content="#0D0205" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════ -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-lotus">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 10C50 10 35 30 35 50C35 70 50 85 50 85C50 85 65 70 65 50C65 30 50 10 50 10Z" fill="#D4AF37" opacity="0.8"/>
+        <path d="M20 40C20 40 35 35 50 50C65 65 60 80 60 80C60 80 45 75 30 60C15 45 20 40 20 40Z" fill="#D4AF37" opacity="0.5"/>
+        <path d="M80 40C80 40 65 35 50 50C35 65 40 80 40 80C40 80 55 75 70 60C85 45 80 40 80 40Z" fill="#D4AF37" opacity="0.5"/>
+        <circle cx="50" cy="50" r="6" fill="#FFE89C"/>
+      </svg>
+    </div>
+    <p class="loading-text">ආරාධනා පත්‍රය සූදානම් වෙමින්...</p>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       ENVELOPE COVER (MODERN GLASS CARD)
+  ═══════════════════════════════════ -->
+  <div class="envelope-cover" id="envelopeCover">
+    <div class="envelope-card-glow">
+      <!-- Wax Seal -->
+      <div class="wax-seal" id="waxSeal"></div>
+
+      <!-- Guest Name (Dynamic) -->
+      <h2 class="envelope-guest-name" id="envelopeGuestName">ගරු ආරාධිතයාණෙනි</h2>
+      <p class="envelope-subtitle">Wedding Invitation</p>
+
+      <!-- Open Button -->
+      <button class="envelope-open-btn" id="openEnvelopeBtn" aria-label="ආරාධනා පත්‍රය විවෘත කරන්න">
+        <span>✨</span>
+        <span>ආරාධනා පත්‍රය විවෘත කරන්න</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       FLOATING PETALS CANVAS
+  ═══════════════════════════════════ -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- ═══════════════════════════════════
+       FLOATING AUDIO PLAYER
+  ═══════════════════════════════════ -->
+  <div class="audio-player" id="audioPlayer" title="සංගීතය">
+    <span class="icon" id="audioIcon">🎵</span>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       MAIN INVITATION CONTENT
+  ═══════════════════════════════════ -->
+  <main class="invitation-content" id="invitationContent">
+
+    <!-- ── HERO SECTION ── -->
+    <section class="section hero-section" id="hero">
+      <div class="section-inner">
+        <div class="hero-pill-badge reveal">✨ Save The Date ✨</div>
+        <h1 class="hero-auspicious reveal">ජය මංගලම් වේවා!</h1>
+
+        <div class="ornament-divider reveal">
+          <span class="line"></span>
+          <span class="icon">🪷</span>
+          <span class="line"></span>
+        </div>
+
+        <div class="hero-couple-names reveal">
+          Kasun
+          <span class="ampersand">&</span>
+          Sanduni
+        </div>
+
+        <p class="hero-sinhala-names reveal">කසුන් ❤ සඳුනි</p>
+
+        <p class="hero-tagline reveal">අපගේ නොමියෙන ආදර කතාවේ නව ඇරඹුම සමරන්නට ඔබට සාදරයෙන් ආරාධනා කරමු</p>
+
+        <div class="hero-date-badge reveal">
+          📅 2026 දෙසැම්බර් 20 වන ඉරිදා
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COUPLE SECTION ── -->
+    <section class="section couple-section" id="couple">
+      <div class="section-inner glass-card reveal-scale">
+        <h2 class="section-title">💍 මනාලයා & මනාලිය</h2>
+        <p class="section-subtitle">The Happy Couple</p>
+
+        <div class="couple-photos">
+          <div class="couple-photo-frame">
+            <img src="assets/images/groom.jpg" alt="මනාලයා - කසුන්" id="groomPhoto" />
+          </div>
+          <span class="couple-heart">💕</span>
+          <div class="couple-photo-frame">
+            <img src="assets/images/bride.jpg" alt="මනාලිය - සඳුනි" id="bridePhoto" />
+          </div>
+        </div>
+
+        <div class="couple-parents-grid">
+          <div class="parent-card">
+            <p class="parent-label">මනාලයා</p>
+            <h3 class="parent-name">කසුන් ප්‍රභාත් පෙරේරා</h3>
+            <p class="parent-desc">මහාචාර්ය නිමල් පෙරේරා හා<br/>ශ්‍රීමති මාලනී පෙරේරාගේ ප්‍රේමණීය පුත්‍රයා</p>
+          </div>
+          <div class="parent-card">
+            <p class="parent-label">මනාලිය</p>
+            <h3 class="parent-name">සඳුනි කවිශානී ජයවර්ධන</h3>
+            <p class="parent-desc">ඉංජිනේරු සුනිල් ජයවර්ධන හා<br/>ශ්‍රීමති කමලා ජයවර්ධනගේ ප්‍රේමණීය දියණිය</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COUNTDOWN SECTION ── -->
+    <section class="section countdown-section" id="countdown">
+      <div class="section-inner glass-card reveal-scale">
+        <h2 class="section-title">⏳ මංගල දිනයට තව</h2>
+        <p class="section-subtitle">The Countdown</p>
+
+        <div class="countdown-grid">
+          <div class="countdown-item">
+            <div class="countdown-number" id="countDays">00</div>
+            <div class="countdown-label">දින</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="countHours">00</div>
+            <div class="countdown-label">පැය</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="countMinutes">00</div>
+            <div class="countdown-label">මිනිත්තු</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="countSeconds">00</div>
+            <div class="countdown-label">තත්පර</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AUSPICIOUS TIMES / TIMELINE ── -->
+    <section class="section timeline-section" id="timeline">
+      <div class="section-inner glass-card reveal">
+        <h2 class="section-title">📜 නැකත් හා කාලසටහන</h2>
+        <p class="section-subtitle">Auspicious Times & Program</p>
+
+        <div class="timeline">
+          <div class="timeline-event">
+            <div class="timeline-icon">🪔</div>
+            <div class="timeline-details">
+              <div class="timeline-time">පෙ.ව. 7:00</div>
+              <div class="timeline-title">මංගල පහන දැල්වීම</div>
+              <div class="timeline-desc">ශුභ මොහොතින් මංගල උත්සවය ආරම්භය</div>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-icon">🛕</div>
+            <div class="timeline-details">
+              <div class="timeline-time">පෙ.ව. 8:15</div>
+              <div class="timeline-title">පෝරු මංගල්‍යය</div>
+              <div class="timeline-desc">සාම්ප්‍රදායික පෝරුව මත මංගල්‍ය චාරිත්‍ර</div>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-icon">✍️</div>
+            <div class="timeline-details">
+              <div class="timeline-time">පෙ.ව. 9:30</div>
+              <div class="timeline-title">විවාහ ලියාපදිංචිය</div>
+              <div class="timeline-desc">නීත්‍යානුකූල විවාහ ලියාපදිංචි කිරීම</div>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-icon">📸</div>
+            <div class="timeline-details">
+              <div class="timeline-time">පෙ.ව. 10:00</div>
+              <div class="timeline-title">ඡායාරූප ගැනීම</div>
+              <div class="timeline-desc">සමූහ සහ පවුලේ ඡායාරූප</div>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="timeline-icon">🍽️</div>
+            <div class="timeline-details">
+              <div class="timeline-time">ප.ව. 12:00</div>
+              <div class="timeline-title">මංගල සංග්‍රහය</div>
+              <div class="timeline-desc">ආරාධිත අමුත්තන් සඳහා මංගල භෝජන සංග්‍රහය</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VENUE SECTION ── -->
+    <section class="section venue-section" id="venue">
+      <div class="section-inner glass-card reveal">
+        <h2 class="section-title">📍 මංගල උත්සව ස්ථානය</h2>
+        <p class="section-subtitle">Wedding Location</p>
+
+        <h3 class="venue-name">🏛️ Waters Edge, Kotte</h3>
+        <p class="venue-address">
+          316, Ethul Kotte Road, Battaramulla, Sri Lanka<br/>
+          📞 +94 11 286 3863
+        </p>
+
+        <div class="venue-map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9!2d79.9!3d6.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTQnMDAuMCJOIDc5wrA1NCcwMC4wIkU!5e0!3m2!1sen!2slk!4v1600000000000!5m2!1sen!2slk"
+            allowfullscreen=""
+            loading="lazy"
+            title="Waters Edge Venue Map">
+          </iframe>
+        </div>
+
+        <div class="venue-buttons">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=6.9,79.9" target="_blank" rel="noopener" class="btn-gold">
+            <span>📍</span>
+            Google Maps Direct
+          </a>
+          <button class="btn-outline" id="btnAddCalendar">
+            <span>📅</span>
+            Calendar එකට එක් කරන්න
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALLERY SECTION ── -->
+    <section class="section gallery-section" id="gallery">
+      <div class="section-inner glass-card reveal">
+        <h2 class="section-title">📸 අපේ මතකයන්</h2>
+        <p class="section-subtitle">Memories</p>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RSVP SECTION ── -->
+    <section class="section rsvp-section" id="rsvp">
+      <div class="section-inner glass-card reveal-scale">
+        <h2 class="section-title">💌 ආරාධනය තහවුරු කිරීම</h2>
+        <p class="section-subtitle">RSVP via WhatsApp</p>
+
+        <div class="rsvp-field">
+          <label class="rsvp-label" for="rsvpName">👤 ඔබගේ නම</label>
+          <input type="text" class="rsvp-input" id="rsvpName" placeholder="ඔබගේ සම්පූර්ණ නම ඇතුළත් කරන්න" />
+        </div>
+
+        <div class="rsvp-field">
+          <label class="rsvp-label" for="rsvpAttend">📋 සහභාගිත්වය</label>
+          <select class="rsvp-select" id="rsvpAttend">
+            <option value="">-- තෝරන්න --</option>
+            <option value="yes">✅ සහභාගී වෙමි</option>
+            <option value="no">❌ සහභාගී වීමට නොහැක</option>
+          </select>
+        </div>
+
+        <div class="rsvp-field">
+          <label class="rsvp-label" for="rsvpGuests">👥 පැමිණෙන සංඛ්‍යාව</label>
+          <select class="rsvp-select" id="rsvpGuests">
+            <option value="1">1 දෙනා</option>
+            <option value="2" selected>2 දෙනා</option>
+            <option value="3">3 දෙනා</option>
+            <option value="4">4 දෙනා</option>
+            <option value="5+">5+ දෙනා</option>
+          </select>
+        </div>
+
+        <button class="btn-whatsapp" id="btnRsvpWhatsapp" style="width: 100%; margin-top: 1rem;">
+          WhatsApp හරහා RSVP යවන්න
+        </button>
+      </div>
+    </section>
+
+    <!-- ── WISHES SECTION ── -->
+    <section class="section wishes-section" id="wishes">
+      <div class="section-inner glass-card reveal">
+        <h2 class="section-title">🌸 ඔබගේ සුබ පැතුම්</h2>
+        <p class="section-subtitle">Send Your Blessings</p>
+
+        <textarea class="wishes-textarea" id="wishesText" placeholder="කසුන් සහ සඳුනිට ඔබගේ සුබ පැතුම් මෙහි ලියන්න..."></textarea>
+        <button class="btn-whatsapp" id="btnSendWishes" style="width: 100%; margin-top: 1.2rem;">
+          සුබ පැතුම් WhatsApp හරහා යවන්න
+        </button>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+      <p class="footer-text">
+        Made with ❤️ for Kasun & Sanduni's Wedding | © 2026
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- ═══════════════════════════════════
+       GALLERY LIGHTBOX
+  ═══════════════════════════════════ -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="Gallery Image" id="lightboxImg" />
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
