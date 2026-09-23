@@ -17,7 +17,7 @@
     weddingEndDate: '2026-12-20T15:00:00+05:30',
     venueName: 'Waters Edge',
     venueAddress: '316, Ethul Kotte Road, Battaramulla, Sri Lanka',
-    whatsappNumber: '94771234567', // Replace with actual number (no + prefix)
+    whatsappNumber: '94774559982', // Replace with actual number (no + prefix)
     googleCalendarTitle: 'කසුන් ❤ සඳුනි මංගල උත්සවය',
     googleCalendarLocation: 'Waters Edge, 316 Ethul Kotte Road, Battaramulla',
   };
@@ -157,8 +157,8 @@
   function stopAudio() {
     if (audioCtx) {
       audioNodes.forEach((node) => {
-        if (node.osc) { try { node.osc.stop(); } catch (e) {} }
-        if (node.lfo) { try { node.lfo.stop(); } catch (e) {} }
+        if (node.osc) { try { node.osc.stop(); } catch (e) { } }
+        if (node.lfo) { try { node.lfo.stop(); } catch (e) { } }
       });
       audioNodes = [];
       isPlaying = false;
